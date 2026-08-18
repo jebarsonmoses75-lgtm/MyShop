@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Shop</title>
+    <link rel="stylesheet" href="My Shop.css">
+</head>
+<body>
+    <header>
+        <h1>My Shop</h1>
+        <span>Cart</span>
+    </header>
+
+    <div class="container"> 
+
+
+        <div class="products">
+
+            <div class="product-card">
+                <img src="phone.jpg" alt="phone">
+                <h3>Smart Phone</h3>
+                <p>Apple iPhone 17 256GB Pink</p>
+                <p class="price">$89,999.00</p>
+                <button onclick="addtocart('smart phone',89999)">Add to cart</button>
+                </div>
+
+
+                 <div class="product-card">
+                <img src="headphone.jpeg" alt="Headphone">
+                <h3>Headphone</h3>
+                <p>Sony WH-1000XM4 Wireless Noise-Canceling Headphones</p>
+                <p class="price">$3,263.00</p>
+                <button onclick="addtocart('Headphone',3263)">Add to cart</button>
+                </div>
+
+                 <div class="product-card">
+                <img src="smart watch.jpg" alt="Smart Watch">
+                <h3>Smart Watch</h3>
+                <p>Apple Watch Series 9 GPS + Cellular, 45mm Starlight Aluminum Case with Starlight Sport Band</p>
+                <p class="price">$5,499.00</p>
+                <button onclick="addtocart('smart watch',5499)">Add to cart</button>
+                </div>
+
+                 <div class="product-card">
+                <img src="Laptop.jpeg" alt="Laptop">
+                <h3>Laptop</h3>
+                <p>Hp Intel Core I5 13th Gen Windows 11 Home Laptop, 15-fd0467tu ( Natural Silver,16GB-512GB )</p>
+                <p class="price">$56,589.00</p>
+                <button onclick="addtocart('Laptop',56589.00)">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                <img src="airpods.webp" alt="AirPods">
+                <h3>AirPods</h3>
+                <p>Apple AirPods Pro (2nd Generation) Wireless Earbuds with Active Noise Cancellation</p>
+                <p class="price">$2,5999.00</p>
+                <button onclick="addtocart('AirPods',25999)">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                <img src="tablet.webp" alt="Tablet">
+                <h3>Tablet</h3>
+                <p>Apple iPad (10th Generation) 64GB Wi-Fi + Cellular, 10.9-inch Liquid Retina Display</p>
+                <p class="price">$36,569.00</p>
+                <button onclick="addtocart('Tablet',36569)">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                <img src="projector.webp" alt="Projector">
+                <h3>Projector</h3>
+                <p>BenQ HT3550 1080P Full HD Projector with Built-in Speaker</p>
+                <p class="price">$22,698.00</p>
+                <button onclick="addtocart('Projector',22698)">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                <img src="wifi usb.webp" alt="WiFi USB">
+                <h3>WiFi USB</h3>
+                <p>TP-Link Archer T4U Plus AC1300 High Gain Wireless Dual Band USB Adapter</p>
+                <p class="price">$999.00</p>
+                <button onclick="addtocart('WiFi USB',999)">Add to cart</button>
+                </div>
+
+                <div class="product-card">
+                <img src="gamepad.webp" alt="Gamepad">
+                <h3>Gamepad</h3>
+                <p>Xbox Wireless Controller - Carbon Black</p>
+                <p class="price">$3,899.00</p>
+                <button onclick="addtocart('Gamepad',3899)">Add to cart</button>
+                </div>
+
+
+                </div>
+                
+
+                <div class="card">         
+                    <h2>Your Cart</h2>
+                    <ul id="cartitems"></ul>
+                    <div class="total-box">
+                        Total:$<span id="total">0</span>
+                    </div>
+                </div>
+        </div>
+        <script src="script.js"></script>
+
+</body>
+</html>
