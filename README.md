@@ -45,4 +45,18 @@ B.E. Computer Science and Engineering Student
 
 ## 🌐 Live Demo
 
-👉 [View My Shop Live Website](https://jebarsonmoses75-lgtm.github.io/MyShop/)
+👉 [View My Shop Live Website](https://jebarsonmoses75-lgtm.github.io/MyShop/)]
+
+## 📸 Project Screenshots
+
+### 🏠 Home Page
+![My Shop Home](home page.png)
+
+### 🛒 Cart & Wishlist
+![Cart and Wishlist](cart & wishlist.png)
+
+### 🧾 Checkout
+![Checkout](Checkout.png)
+
+### ✅ Order Confirmation
+![Order Confirmation](Order conformation.png)
