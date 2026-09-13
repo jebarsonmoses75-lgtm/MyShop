@@ -50,13 +50,13 @@ B.E. Computer Science and Engineering Student
 ## 📸 Project Screenshots
 
 ### 🏠 Home Page
-![My Shop Home](home page.png)
+![My Shop Home](home.png)
 
 ### 🛒 Cart & Wishlist
-![Cart and Wishlist](cart & wishlist.png)
+![Cart and Wishlist](Cart-Wishlist.png)
 
 ### 🧾 Checkout
 ![Checkout](Checkout.png)
 
 ### ✅ Order Confirmation
-![Order Confirmation](Order conformation.png)
+![Order Confirmation](Order-success.png)
