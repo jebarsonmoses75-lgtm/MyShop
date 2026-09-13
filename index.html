@@ -8,100 +8,362 @@
 </head>
 <body>
     <header>
-        <h1>My Shop</h1>
-        <span>Cart</span>
-    </header>
+    <h1>My Shop</h1>
 
-    <div class="container"> 
+    <button class="cart-button" onclick="scrollToCart()">
+        🛒 Cart
+        <span id="cart-count">0</span>
+    </button>
+    
+</header>
+    <div class="container">
 
+    <main class="shop-area">
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                onkeyup="searchProducts()"
+            >
+        </div>
+
+        <div class="category-filter">
+            <button onclick="filterProducts('All')">All</button>
+            <button onclick="filterProducts('Phones')">Phones</button>
+            <button onclick="filterProducts('Audio')">Audio</button>
+            <button onclick="filterProducts('Wearables')">Wearables</button>
+            <button onclick="filterProducts('Computers')">Computers</button>
+            <button onclick="filterProducts('Electronics')">Electronics</button>
+            <button onclick="filterProducts('Accessories')">Accessories</button>
+            <button onclick="filterProducts('Gaming')">Gaming</button>
+        </div>
 
         <div class="products">
 
-            <div class="product-card">
+         
+            <div class="product-card" data-category="Phones">
                 <img src="phone.jpg" alt="phone">
                 <h3>Smart Phone</h3>
                 <p>Apple iPhone 17 256GB Pink</p>
                 <p class="price">$89,999.00</p>
-                <button onclick="addtocart('smart phone',89999)">Add to cart</button>
+
+              <div class="product-actions">
+
+            <button onclick="addtocart('smart phone',89999)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('smart phone')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Smart Phone','phone.jpg','Apple iPhone 17 256GB Pink',89999)">
+            View Details
+                </button>
                 </div>
 
 
-                 <div class="product-card">
+                 <div class="product-card" data-category="Audio">
                 <img src="headphone.jpeg" alt="Headphone">
                 <h3>Headphone</h3>
                 <p>Sony WH-1000XM4 Wireless Noise-Canceling Headphones</p>
                 <p class="price">$3,263.00</p>
-                <button onclick="addtocart('Headphone',3263)">Add to cart</button>
+               <div class="product-actions">
+
+            <button onclick="addtocart('Headphone',3263)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('Headphone')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Headphone','headphone.jpeg','Sony WH-1000XM4 Wireless Noise-Canceling Headphones',3263)">
+            View Details
+                </button>
                 </div>
 
-                 <div class="product-card">
+                 <div class="product-card" data-category="Wearables">
                 <img src="smart watch.jpg" alt="Smart Watch">
                 <h3>Smart Watch</h3>
                 <p>Apple Watch Series 9 GPS + Cellular, 45mm Starlight Aluminum Case with Starlight Sport Band</p>
                 <p class="price">$5,499.00</p>
-                <button onclick="addtocart('smart watch',5499)">Add to cart</button>
+                <div class="product-actions">
+
+            <button onclick="addtocart('Smart Watch',5499)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('Smart Watch')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Smart Watch','smart watch.jpg','Apple Watch Series 9 GPS + Cellular, 45mm Starlight Aluminum Case with Starlight Sport Band',5499)">
+            View Details
+                </button>
                 </div>
 
-                 <div class="product-card">
+                 <div class="product-card" data-category="Computers">
                 <img src="Laptop.jpeg" alt="Laptop">
                 <h3>Laptop</h3>
                 <p>Hp Intel Core I5 13th Gen Windows 11 Home Laptop, 15-fd0467tu ( Natural Silver,16GB-512GB )</p>
                 <p class="price">$56,589.00</p>
-                <button onclick="addtocart('Laptop',56589.00)">Add to cart</button>
+                <div class="product-actions">
+
+            <button onclick="addtocart('Laptop',56589)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('Laptop')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Laptop','Laptop.jpeg','Hp Intel Core I5 13th Gen Windows 11 Home Laptop, 15-fd0467tu ( Natural Silver,16GB-512GB )',56589)">
+            View Details
+                </button>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Audio">
                 <img src="airpods.webp" alt="AirPods">
                 <h3>AirPods</h3>
                 <p>Apple AirPods Pro (2nd Generation) Wireless Earbuds with Active Noise Cancellation</p>
-                <p class="price">$2,5999.00</p>
-                <button onclick="addtocart('AirPods',25999)">Add to cart</button>
-                </div>
+                <p class="price">$25,999.00</p>
+                <div class="product-actions">
 
-                <div class="product-card">
+            <button onclick="addtocart('AirPods',25999)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('AirPods')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('AirPods','airpods.webp','Apple AirPods Pro (2nd Generation) Wireless Earbuds with Active Noise Cancellation',25999)">
+            View Details
+                </button>
+                </div>
+                <div class="product-card" data-category="Computers">
                 <img src="tablet.webp" alt="Tablet">
                 <h3>Tablet</h3>
                 <p>Apple iPad (10th Generation) 64GB Wi-Fi + Cellular, 10.9-inch Liquid Retina Display</p>
                 <p class="price">$36,569.00</p>
-                <button onclick="addtocart('Tablet',36569)">Add to cart</button>
+                <div class="product-actions">
+
+            <button onclick="addtocart('Tablet',36569)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('Tablet')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Tablet','tablet.webp','Apple iPad (10th Generation) 64GB Wi-Fi + Cellular, 10.9-inch Liquid Retina Display',36569)">
+            View Details
+                </button>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Electronics">
                 <img src="projector.webp" alt="Projector">
                 <h3>Projector</h3>
                 <p>BenQ HT3550 1080P Full HD Projector with Built-in Speaker</p>
                 <p class="price">$22,698.00</p>
-                <button onclick="addtocart('Projector',22698)">Add to cart</button>
+                <div class="product-actions">
+
+            <button onclick="addtocart('Projector',22698)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('Projector')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Projector','projector.webp','BenQ HT3550 1080P Full HD Projector with Built-in Speaker',22698)">
+            View Details
+                </button>
                 </div>
 
-                <div class="product-card">
+                <div class="product-card" data-category="Accessories">
                 <img src="wifi usb.webp" alt="WiFi USB">
                 <h3>WiFi USB</h3>
                 <p>TP-Link Archer T4U Plus AC1300 High Gain Wireless Dual Band USB Adapter</p>
                 <p class="price">$999.00</p>
-                <button onclick="addtocart('WiFi USB',999)">Add to cart</button>
-                </div>
+                <div class="product-actions">
 
-                <div class="product-card">
+            <button onclick="addtocart('WiFi USB',999)">
+                Add to cart
+            </button>
+
+            <button class="wishlist-btn" onclick="addToWishlist('WiFi USB')">
+                ♡
+             </button>
+
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('WiFi USB','wifi usb.webp','TP-Link Archer T4U Plus AC1300 High Gain Wireless Dual Band USB Adapter',999)">
+            View Details
+                </button>
+                </div>
+                <div class="product-card" data-category="Gaming">
                 <img src="gamepad.webp" alt="Gamepad">
                 <h3>Gamepad</h3>
                 <p>Xbox Wireless Controller - Carbon Black</p>
                 <p class="price">$3,899.00</p>
-                <button onclick="addtocart('Gamepad',3899)">Add to cart</button>
-                </div>
+                <div class="product-actions">
 
+            <button onclick="addtocart('Gamepad',3899)">
+                Add to cart
+            </button>
 
-                </div>
-                
+            <button class="wishlist-btn" onclick="addToWishlist('Gamepad')">
+                ♡
+             </button>
 
-                <div class="card">         
-                    <h2>Your Cart</h2>
-                    <ul id="cartitems"></ul>
-                    <div class="total-box">
-                        Total:$<span id="total">0</span>
-                    </div>
+            </div>
+
+            <button class="details-btn"
+             onclick="showDetails('Gamepad','gamepad.webp','Xbox Wireless Controller - Carbon Black',3899)">
+            View Details
+                </button>
                 </div>
+    </main>
+
+    <aside class="card">
+        <h2>Your Cart</h2>
+        <ul id="cartitems"></ul>
+
+        <div class="total-box">
+            Total: $<span id="total">0</span>
         </div>
+        <button class="checkout-btn" onclick="checkout()">
+            Proceed to Checkout
+        </button>
+        </aside>
+
+</div>
+<div class="wishlist">
+    <h2>❤️ My Wishlist</h2>
+    <ul id="wishlistItems"></ul>
+</div>
+    <!-- PRODUCT DETAILS POPUP -->
+
+<div class="details-modal" id="detailsModal">
+
+    <div class="details-box">
+
+        <button class="close-btn" onclick="closeDetails()">
+            ×
+        </button>
+
+        <img id="detailsImage" src="" alt="Product">
+
+        <div class="details-content">
+
+            <h2 id="detailsName"></h2>
+
+            <p id="detailsDescription"></p>
+
+            <h3>
+                $<span id="detailsPrice"></span>
+            </h3>
+
+            <button id="detailsCartButton">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<section id="checkout-section" class="checkout-section">
+
+    <h2>🛍️ Checkout</h2>
+
+    <div class="checkout-content">
+
+        <div class="customer-details">
+
+            <h3>Customer Details</h3>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Full Name"
+            >
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Phone Number"
+            >
+
+            <textarea
+                id="customerAddress"
+                placeholder="Delivery Address"
+            ></textarea>
+
+            <h3>Payment Method</h3>
+
+            <label>
+                <input type="radio" name="payment" value="Cash on Delivery">
+                Cash on Delivery
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="UPI">
+                UPI
+            </label>
+
+            <label>
+                <input type="radio" name="payment" value="Card">
+                Card
+            </label>
+
+        </div>
+
+        <div class="order-summary">
+
+            <h3>Order Summary</h3>
+
+            <ul id="checkoutItems"></ul>
+
+<div class="checkout-total">
+    Total:
+    <span id="checkoutTotal">$0</span>
+</div>
+            <button type="button" onclick="placeOrder()">
+    Place Order
+</button>
+
+        </div>
+
+    </div>
+
+</section>
         <script src="script.js"></script>
 
 </body>
