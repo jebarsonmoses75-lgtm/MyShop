@@ -53,7 +53,7 @@ B.E. Computer Science and Engineering Student
 ![My Shop Home](home.png)
 
 ### 🛒 Cart & Wishlist
-![Cart and Wishlist](Cart-Wishlist.png)
+![Cart and Wishlist](cartwishlist.png)
 
 ### 🧾 Checkout
 ![Checkout](Checkout.png)
