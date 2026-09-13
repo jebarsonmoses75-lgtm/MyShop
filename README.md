@@ -42,3 +42,7 @@ This project was created as a learning and portfolio project to practice fronten
 **Jebarson Moses S**
 
 B.E. Computer Science and Engineering Student
+
+## 🌐 Live Demo
+
+👉 [View My Shop Live Website](https://jebarsonmoses75-lgtm.github.io/MyShop/)
